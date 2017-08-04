@@ -13,4 +13,4 @@ RUN apt-get update && apt-get -y install hhvm && apt-get -y install nano && apt-
 RUN git clone https://github.com/JaniKibichi/quickussd.git && \
     cd quickussd 
 
-CMD ["hhvm -m daemon", "ussd.php"]
+CMD ["/usr/bin/hhvm -m daemon -p 5500 ussd.php"]
