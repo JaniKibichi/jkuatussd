@@ -10,8 +10,7 @@ RUN deb http://dl.hhvm.com/debian jessie main | tee /etc/apt/sources.list.d/hhvm
 RUN apt-get update && apt-get -y install hhvm && apt-get -y install nano && apt-get -y install git
 
 #pull ussd app
-RUN git clone https://github.com/JaniKibichi/quickussd.git && \
-    cd quickussd 
+RUN git clone https://github.com/JaniKibichi/quickussd.git 
 #expose port
 EXPOSE 5500:5500    
-CMD ["/usr/bin/hhvm -m daemon -p 5500 ussd.php"]
+]
