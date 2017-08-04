@@ -12,5 +12,6 @@ RUN apt-get update && apt-get -y install hhvm && apt-get -y install nano && apt-
 #pull ussd app
 RUN git clone https://github.com/JaniKibichi/quickussd.git && \
     cd quickussd 
-
+#expose port
+EXPOSE 5500:5500    
 CMD ["/usr/bin/hhvm -m daemon -p 5500 ussd.php"]
